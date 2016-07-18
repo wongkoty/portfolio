@@ -61,17 +61,6 @@ var Nav = React.createClass({
 		return({
 			nav: "About"})
 	},
-	getIG: function() {
-		console.log('getting ig')
-		$.ajax({
-			url: "https://api.instagram.com/v1/users/self/media/recent/?access_token=41281790.1677ed0.033e8892d62e4394b44bc1a9246fb33f",
-			method: "get",
-			dataType: "jsonp",
-		}).done(function(data) {
-			console.log(data);
-			return data;
-		})
-	},
 	render: function() {
 		// this.getIG();
 		var self = this;
@@ -154,17 +143,6 @@ var RenderNavElement = React.createClass({
 })
 
 var About = React.createClass({
-	// getIG: function() {
-	// 	console.log('getting ig')
-	// 	$.ajax({
-	// 		url: "https://api.instagram.com/v1/users/self/media/recent/?access_token=41281790.1677ed0.033e8892d62e4394b44bc1a9246fb33f",
-	// 		method: "get",
-	// 		dataType: "jsonp",
-	// 	}).done(function(data) {
-	// 		console.log(data);
-	// 		return  data;
-	// 	})
-	// },
 	getInitialState: function() {
 		return ({ig: null})
 	},
@@ -182,7 +160,7 @@ var About = React.createClass({
 	render: function() {
 		// var igData = this.getIG();
 		console.log(this.props.igData)
-		return (<div className="about layout-grey">
+		return (<div className="about">
 			<div className="row">
 				<div className="col-lg-12">
 					<h1 className="text-center learning-curve">Anything is possible, you gotta dream like you never seen obstacles</h1>
@@ -262,20 +240,77 @@ var Blog = React.createClass({
 
 var Portfolio = React.createClass({
 	render: function() {
-		return (<div className="row layout-grey">
-			<div className="col-md-4 col-md-offset-1">
-			Portfolio
+		return (<div className="row">
+			<div className="portfolio col-md-5 col-md-offset-1">
+				<b>Name:</b> Space Exploration<br/>
+				<b>Description:</b> A 3D orrery of our solar system<br/>
+				<b>Tech:</b> HTML, CSS, Javascript, Three.js, Node.js<br/><br/><br/>
+			<a href="https://spaceexploration.herokuapp.com/">
+				<div className="hexagon-space">
+  				<div className="hexTop-space"></div>
+ 					<div className="hexBottom-space"></div>
+				</div>
+			</a>
 			</div>
+
+			<div className="portfolio col-md-5 col-md-offset-1">
+				<b>Name:</b> Calorie Counter<br/>
+				<b>Description:</b> Web app that allows a user track the amount of calories consumed each day<br/>
+				<b>Tech:</b> HTML, CSS, Javascript, React, USDA API, Node.js, Mongo, Passport<br/>
+			<a href="https://fork-calorie-counter-app.herokuapp.com/">
+				<div className="hexagon-calorie">
+  				<div className="hexTop-calorie"></div>
+ 					<div className="hexBottom-calorie"></div>
+				</div>
+			</a>
+			</div>
+
+			<div className="portfolio col-md-5 col-md-offset-1">
+				<b>Name:</b> FoodDate<br/>
+				<b>Description:</b> Web app that allows a user to look up a restaurant and send text to their friends<br/>
+				<b>Tech:</b> HTML, CSS, Javascript, Twilio API, Yelp API, Google Maps, Node.js, Mongo, Passport<br/>
+			<a href="https://fooddate.herokuapp.com/">
+				<div className="hexagon-fooddate">
+  				<div className="hexTop-fooddate"></div>
+ 					<div className="hexBottom-fooddate"></div>
+				</div>
+			</a>
+			</div>
+
+			<div className="portfolio col-md-5 col-md-offset-1">
+				<b>Name:</b> BlackJack<br/>
+				<b>Description:</b> Classic BlackJack game<br/>
+				<b>Tech:</b> HTML, CSS, Javascript<br/><br/><br/>
+			<a href="http://wongkoty.github.io/blackjack/">
+				<div className="hexagon-blackjack">
+  				<div className="hexTop-blackjack"></div>
+ 					<div className="hexBottom-blackjack"></div>				
+				</div>
+			</a>
+			</div>
+	
+
 			</div>)
 	}
 })
 
 var Art = React.createClass({
 	render: function() {
-		return (<div className="layout-grey-art">
+		return (<div>
 			<h1 className="text-center learning-curve">Photography</h1>
-			<div className="text-center">
-				<img src="https://c6.staticflickr.com/9/8673/28310770005_c597a291fa_b.jpg" width="500" height="240" alt="mallorca" />
+			<div className="text-center row">
+				<a data-flickr-embed="true"  href="https://www.flickr.com/photos/142276531@N02/28310770005/in/dateposted-public/" title="mallorca"><img className="col-md-6" src="https://c6.staticflickr.com/9/8673/28310770005_c597a291fa_b.jpg" width="500" height="240"/></a>
+				<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+				<a data-flickr-embed="true"  href="https://www.flickr.com/photos/142276531@N02/28097781530/in/dateposted-public/" title="osaka"><img className="col-md-6" src="https://c3.staticflickr.com/9/8758/28097781530_3f8ac2f048_b.jpg" width="500" height="240"/></a>
+				<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+				<a data-flickr-embed="true"  href="https://www.flickr.com/photos/142276531@N02/28097781560/in/dateposted-public/" title="hiroshima"><img className="art col-md-6" src="https://c1.staticflickr.com/9/8713/28097781560_bba7c40acb_b.jpg" width="500" height="240"/></a>
+				<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+				<a data-flickr-embed="true"  href="https://www.flickr.com/photos/142276531@N02/27764180084/in/dateposted-public/" title="hong kong"><img className="art col-md-6" src="https://c5.staticflickr.com/9/8702/27764180084_1f33dc963b_b.jpg" width="500" height="240"/></a>
+				<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+				<a data-flickr-embed="true"  href="https://www.flickr.com/photos/142276531@N02/27764969233/in/dateposted-public/" title="benny portfolio"><img className="art col-md-6" src="https://c2.staticflickr.com/9/8753/27764969233_6ca6f2e86a_b.jpg" width="500" height="240"/></a>
+				<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+				<a data-flickr-embed="true"  href="https://www.flickr.com/photos/142276531@N02/28348689216/in/dateposted-public/" title="sherry katie portfolio"><img className="art col-md-6" src="https://c1.staticflickr.com/9/8281/28348689216_cc8e9059b6_b.jpg" width="500" height="240"/></a>
+				<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 			</div>
 			<h1 className="text-center learning-curve">Travel</h1>
 			<div className="text-center">
@@ -289,12 +324,11 @@ var Art = React.createClass({
 	}
 })
 
-var Resume = React.createClass({
-	render: function() {
-		return (<div>
-			Resume</div>)
-	}
-})
+// var Resume = React.createClass({
+// 	render: function() {
+// 		return (<div></div>)
+// 	}
+// })
 
 var Footer = React.createClass({
 	render: function() {
