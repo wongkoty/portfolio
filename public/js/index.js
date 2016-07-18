@@ -185,9 +185,12 @@ var About = React.createClass({
 				
 	
 				</div>
-				<div className="profile-pic col-md-4">
-					<img src="/images/koty.jpg"/>
-				</div>
+				<figure className="profile-pic col-md-4">
+					<img className="figure-img img-fluid img-rounded" src="/images/koty.jpg"/>
+						<figure class="figure">
+  						<figcaption class="figure-caption">I like to eat food.</figcaption>
+						</figure>
+				</figure>
 				<div className="row">
 					<div className="col-md-12">
 
