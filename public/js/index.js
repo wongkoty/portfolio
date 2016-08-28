@@ -16,7 +16,7 @@ var Main = React.createClass({
   render: function() {
     return(<div id="main">
     	<div className="learning-curve-black"> 
-    		Koty Wong
+    		Koty Wong - Developer
     	</div>
   <div id="carousel-example-generic" className="carousel slide" data-ride="carousel" data-interval="3500">
   {/*<ol className="carousel-indicators">
@@ -197,7 +197,7 @@ var About = React.createClass({
 					<p>I'm always open to ideas, collaborations and meeting new people, so if you're a cool person,
 					feel free to hit me up in the social media links below!</p>
 
-					{(this.state.ig != null ? <RenderInsta igData={this.state.ig.data}/> : "goodbye")}
+					{(this.state.ig != null ? <RenderInsta igData={this.state.ig.data}/> : "")}
 					</div>
 				</div>
 			</div>
@@ -205,7 +205,7 @@ var About = React.createClass({
 	}
 })
 
-var RenderInsta = React.createClass({
+{/*var RenderInsta = React.createClass({
 	render: function() {
 		// console.log(this.props.igData)
 		var igElements = this.props.igData.map(function(ig){
@@ -227,7 +227,7 @@ var RenderInsta = React.createClass({
 					{igElements}
 			</div>)
 	}
-})
+})*/}
 
 var Blog = React.createClass({
 	render: function() {
@@ -346,9 +346,9 @@ var Footer = React.createClass({
 				<div className="col-xs-1">
 					<a href="http://www.github.com/wongkoty" className="social">g</a>
 				</div>
-				<div className="col-xs-1">
+				{/*<div className="col-xs-1">
 					<a href="http://www.instagram.com/wongkoty" className="social">i</a>
-				</div>
+				</div>*/}
 
 			</div>
 		</div>)
