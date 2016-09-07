@@ -14,7 +14,7 @@ app.use('/resume', function(req, res) {
 });
 
 app.use('/instagram', function(req, res) {
-  console.log('instagrammy')
+  // console.log('instagrammy')
   request("https://api.instagram.com/v1/users/self/media/recent/?access_token=" + process.env.IG_ACCESS_TOKEN + "&count=4", function(error, response, body) {
     if (!error && response.statusCode == 200) {
       // console.log(body);

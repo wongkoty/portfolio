@@ -125,9 +125,9 @@ var Nav = React.createClass({
 
 var RenderNavElement = React.createClass({
 	callback: function() {
-		console.log(this.props.element)
+		// console.log(this.props.element)
 		if (this.props.element == "Resume") {
-			console.log('waaa"')
+			// console.log('waaa"')
 			window.location.assign("/resume");
 		} else if (this.props.element == "Blog") {
 			window.location.assign("https://kotyblog.herokuapp.com/")
@@ -152,14 +152,14 @@ var About = React.createClass({
 			method: "get"
 			// dataType: "jsonp",
 		}).done(function(data) {
-			console.log(data);
+			// console.log(data);
 			// return data;
 			this.setState({ig: data})
 		}.bind(this));
 	},
 	render: function() {
 		// var igData = this.getIG();
-		console.log(this.props.igData)
+		// console.log(this.props.igData)
 		return (<div className="about">
 			<div className="row">
 				<div className="col-lg-12">
@@ -181,7 +181,7 @@ var About = React.createClass({
 					relationships, powerlifting, indulging in the world's finest foods, venturing to unknown territories, 
 					creating music, and learning. Of course though, life has many more things to offer than the usually activities
 					I partake in, thus I keep an open mind in trying new things.</p>
-					{console.log(this.state.ig)}
+					{/*{console.log(this.state.ig)}*/}
 				
 	
 				</div>
